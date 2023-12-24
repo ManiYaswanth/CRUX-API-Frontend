@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# CRUX Report API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Introduction 
+This project is a CRUX Report API built on Flask and React. It allows you to get an insight into their websites' stats.
 
-## Available Scripts
+## Overview
+The CRUX Report API is designed to help users get an insight into their websites' stats. It provides a User Interface which is built on React where a user can provide URLS, filter them and sort them. It uses Google Chrome CRUX API for fetching the data.
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `yarn test`
+Before you begin, make sure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- npm
 
-### `yarn build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the frontend repository
+```bash
+git clone https://github.com/ManiYaswanth/CRUX-API-Frontend
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. In the project directory of frontend application install dependencies
+```bash
+npm install
+```
+3. Start the development server
+```bash
+npm start
+```
+The application will be accessible at http://localhost:3001
+Now for the backend Application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Clone this repository(backend):
 
-### `yarn eject`
+```bash
+git clone https://github.com/ManiYaswanth/CRUX-API-Backend
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Install dependencies:
+Use Virtual Environment and install dependencies
+```bash
+python3 -m venv your_env
+```
+```bash
+pip3 install -r requirements.txt
+```
+Configure the .env file with Google Cloud CRUX API key
+CRUX_API_KEY = your-api-key
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. Navigate to the project directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd app/
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+7. Run the application:
 
-## Learn More
+```bash
+python3 main.py
+```
+The application will be accessible at http://localhost:8000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
+On the User Interface type a single url or multiple urls(Comma separated), select filters(Optional) and Search. The user response is sent to the
+Flask backend application, calls the Chrome CRUX API, receives and filters data and sent to the frontend.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribute
+Contributions are welcome! Feel free to open issues and pull requests.
