@@ -40,8 +40,10 @@ const App = () => {
       }
       console.log(data);
     } catch (error) {
-      setError(error);
-      console.error('Error fetching data:', error);
+      setError("CONNECTION REFUSED/TimedOUT -Try again after sometime");
+      setData([]);
+      console.log(errorMsg, data);
+      console.error('Error fetching data', error);
     }
   };
 
@@ -61,7 +63,7 @@ const App = () => {
       />
     </div>
     <SearchButton handleSearch={handleSearch} />
-      { <DataTable data={data} />}
+      { data.length > 0 && <DataTable data={data} />}
       {errorMsg !== '' && <Error error={errorMsg} />}
     </Container>
   );

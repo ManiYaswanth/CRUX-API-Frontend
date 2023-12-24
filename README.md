@@ -1,7 +1,7 @@
 # CRUX Report API
 
 # Introduction 
-This project is a CRUX Report API built on Flask and React. It allows you to get an insight into their websites' stats.
+This project is a CRUX Report API built on Flask and React. It allows you to get an insight into a websites' stats.
 
 ## Overview
 The CRUX Report API is designed to help users get an insight into their websites' stats. It provides a User Interface which is built on React where a user can provide URLS, filter them and sort them. It uses Google Chrome CRUX API for fetching the data.
